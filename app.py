@@ -53,7 +53,7 @@ def home():
         <h1>✨ Bienvenida ✨</h1>
 
         <p>
-            Tengo una pequeña misión para ti... para el viernes😉
+            Tengo una pequeña misión para ti... para el viernes 😉
         </p>
 
         <a href="/comida?vestimenta=Sport">
@@ -200,6 +200,7 @@ def resultado():
     <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tu Selección</title>
 
         <style>
             body {{
@@ -220,12 +221,38 @@ def resultado():
 
             h1 {{
                 color: #333;
+                margin-bottom: 30px;
             }}
 
             p {{
                 font-size: 24px;
                 color: #555;
-                margin: 30px 0;
+                margin: 25px 0;
+            }}
+
+            .mensaje {{
+                font-size: 18px;
+                color: #777;
+                margin-top: 35px;
+                margin-bottom: 30px;
+            }}
+
+            .whatsapp-btn {{
+                width: 100%;
+                max-width: 300px;
+                background-color: #25D366;
+                color: white;
+                border: none;
+                border-radius: 25px;
+                padding: 16px;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0px 4px 12px rgba(0,0,0,0.20);
+            }}
+
+            a {{
+                text-decoration: none;
             }}
         </style>
 
@@ -240,6 +267,19 @@ def resultado():
             <p>👗 {vestimenta}</p>
 
             <p>🍽️ {comida}</p>
+
+            <div class="mensaje">
+                Interesante... la misión continúa 🕵️‍♂️
+            </div>
+
+            <a href="https://wa.me/17876497309?text=Hola%20😊%0A%0ATe%20envío%20mis%20selecciones:%0A%0A👗%20Vestimenta:%20{vestimenta}%0A🍽️%20Comida:%20{comida}%0A%0AQuedo%20pendiente%20al%20plan%20😉"
+               target="_blank">
+
+                <button class="whatsapp-btn">
+                    💬 Enviar mi selección
+                </button>
+
+            </a>
 
         </div>
 
